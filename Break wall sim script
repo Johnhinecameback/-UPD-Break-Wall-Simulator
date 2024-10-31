@@ -1,0 +1,178 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local FastPunch = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local AutoRebirth = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local ScriptVersion = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.272479564, 0, 0.171467766, 0)
+Frame.Size = UDim2.new(0, 533, 0, 341)
+
+FastPunch.Name = "FastPunch"
+FastPunch.Parent = Frame
+FastPunch.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+FastPunch.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FastPunch.BorderSizePixel = 0
+FastPunch.Position = UDim2.new(0.0318949334, 0, 0.155425221, 0)
+FastPunch.Size = UDim2.new(0, 174, 0, 31)
+FastPunch.Font = Enum.Font.SourceSansBold
+FastPunch.Text = "Fast Punch"
+FastPunch.TextColor3 = Color3.fromRGB(255, 255, 255)
+FastPunch.TextScaled = true
+FastPunch.TextSize = 14.000
+FastPunch.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = FastPunch
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = Frame
+
+AutoRebirth.Name = "AutoRebirth"
+AutoRebirth.Parent = Frame
+AutoRebirth.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+AutoRebirth.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoRebirth.BorderSizePixel = 0
+AutoRebirth.Position = UDim2.new(0.0318949334, 0, 0.266862184, 0)
+AutoRebirth.Size = UDim2.new(0, 174, 0, 31)
+AutoRebirth.Font = Enum.Font.SourceSansBold
+AutoRebirth.Text = "Auto Rebirth"
+AutoRebirth.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoRebirth.TextScaled = true
+AutoRebirth.TextSize = 14.000
+AutoRebirth.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 15)
+UICorner_3.Parent = AutoRebirth
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.131332085, 0, 0.0205278601, 0)
+Title.Size = UDim2.new(0, 394, 0, 32)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "John's Script Gui"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+UICorner_4.Parent = Title
+
+ScriptVersion.Name = "ScriptVersion"
+ScriptVersion.Parent = Frame
+ScriptVersion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptVersion.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptVersion.BorderSizePixel = 0
+ScriptVersion.Position = UDim2.new(0.129455909, 0, 0.88269794, 0)
+ScriptVersion.Size = UDim2.new(0, 394, 0, 32)
+ScriptVersion.Font = Enum.Font.SourceSansBold
+ScriptVersion.Text = "Version 0.01"
+ScriptVersion.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptVersion.TextScaled = true
+ScriptVersion.TextSize = 14.000
+ScriptVersion.TextWrapped = true
+
+UICorner_5.Parent = ScriptVersion
+
+-- Functionality for AutoRebirth and FastPunch
+
+local punchingEnabled = false
+local rebirthEnabled = false
+local punchConnection
+local rebirthConnection
+
+local function punch()
+    local args = {
+        [1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function rebirth()
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("Rebirth"):FireServer()
+end
+
+FastPunch.MouseButton1Down:connect(function()
+    punchingEnabled = not punchingEnabled
+
+    if punchingEnabled then
+        FastPunch.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Change to green
+        punchConnection = game:GetService("RunService").Heartbeat:Connect(function()
+            punch()
+        end)
+    else
+        FastPunch.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Change to red
+        if punchConnection then
+            punchConnection:Disconnect()
+            punchConnection = nil
+        end
+    end
+end)
+
+AutoRebirth.MouseButton1Down:connect(function()
+    rebirthEnabled = not rebirthEnabled
+
+    if rebirthEnabled then
+        AutoRebirth.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Change to green
+        rebirthConnection = game:GetService("RunService").Heartbeat:Connect(function()
+            rebirth()
+        end)
+    else
+        AutoRebirth.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Change to red
+        if rebirthConnection then
+            rebirthConnection:Disconnect()
+            rebirthConnection = nil
+        end
+    end
+end)
+
+-- Draggable Frame Logic
+local dragging = false
+local dragInput, mousePos, framePos
+
+Frame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragInput = input
+        mousePos = input.Position
+        framePos = Frame.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+Frame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        if dragging then
+            local delta = input.Position - mousePos
+            Frame.Position = UDim2.new(framePos.X.Scale, framePos.X.Offset + delta.X, framePos.Y.Scale, framePos.Y.Offset + delta.Y)
+        end
+    end
+end)
