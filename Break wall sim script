@@ -85,6 +85,280 @@ local function punch()
 	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
 end
 
+local function punch2()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch3()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch4()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch5()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch6()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch7()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch8()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch9()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch10()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch11()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch12()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch13()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch14()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch15()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch16()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch17()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch18()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch19()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch20()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch21()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch22()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch23()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch24()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch25()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch26()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch27()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch28()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch29()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch30()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch31()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch32()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch33()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch34()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch35()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch36()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch37()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch38()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch39()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+local function punch40()
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+end
+
+
 local function rebirth()
 	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("Rebirth"):FireServer()
 end
@@ -95,6 +369,45 @@ OPAUTOFASTPUNCH.MouseButton1Down:connect(function()
 		OPAUTOFASTPUNCH.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Change to green
 		punchConnection = game:GetService("RunService").Heartbeat:Connect(function()
 			punch()
+			punch2()
+			punch3()
+			punch4()
+			punch5()
+			punch6()
+			punch7()
+			punch8()
+			punch9()
+			punch10()
+			punch11()
+			punch12()
+			punch13()
+			punch14()
+			punch15()
+			punch16()
+			punch17()
+			punch18()
+			punch19()
+			punch20()
+			punch21()
+			punch22()
+			punch23()
+			punch24()
+			punch25()
+			punch26()
+			punch27()
+			punch28()
+			punch29()
+			punch30()
+			punch31()
+			punch32()
+			punch33()
+			punch34()
+			punch35()
+			punch36()
+			punch37()
+			punch38()
+			punch39()
+			punch40()
 		end)
 	else
 		OPAUTOFASTPUNCH.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Change to red
