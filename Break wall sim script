@@ -1,102 +1,77 @@
--- Gui to Lua
--- Version: 3.2
-
+-- Gui to Lua -- Version: 3.2
 -- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
+local Version02 = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local FastPunch = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
-local UICorner_2 = Instance.new("UICorner")
+local TeleportTo15K = Instance.new("TextButton")
 local AutoRebirth = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local Title = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
-local ScriptVersion = Instance.new("TextLabel")
-local UICorner_5 = Instance.new("UICorner")
+local OPAUTOFASTPUNCH = Instance.new("TextButton")
+local Credits = Instance.new("TextLabel")
+local Credits2 = Instance.new("TextLabel")
+local Credits3 = Instance.new("TextLabel")
 
---Properties:
+-- Properties:
+Version02.Name = "Version0.2"
+Version02.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Version02.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Frame.Parent = Version02
+Frame.BackgroundColor3 = Color3.fromRGB(85, 170, 127)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.272479564, 0, 0.171467766, 0)
-Frame.Size = UDim2.new(0, 533, 0, 341)
-
-FastPunch.Name = "FastPunch"
-FastPunch.Parent = Frame
-FastPunch.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-FastPunch.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FastPunch.BorderSizePixel = 0
-FastPunch.Position = UDim2.new(0.0318949334, 0, 0.155425221, 0)
-FastPunch.Size = UDim2.new(0, 174, 0, 31)
-FastPunch.Font = Enum.Font.SourceSansBold
-FastPunch.Text = "Fast Punch"
-FastPunch.TextColor3 = Color3.fromRGB(255, 255, 255)
-FastPunch.TextScaled = true
-FastPunch.TextSize = 14.000
-FastPunch.TextWrapped = true
+Frame.Position = UDim2.new(0.314537168, 0, 0.109527119, 0)
+Frame.Size = UDim2.new(0, 454, 0, 367)
 
 UICorner.CornerRadius = UDim.new(0, 15)
-UICorner.Parent = FastPunch
+UICorner.Parent = Frame
 
-UICorner_2.CornerRadius = UDim.new(0, 15)
-UICorner_2.Parent = Frame
+TeleportTo15K.Name = "TeleportTo15K"
+TeleportTo15K.Parent = Frame
+TeleportTo15K.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TeleportTo15K.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TeleportTo15K.BorderSizePixel = 0
+TeleportTo15K.Position = UDim2.new(0.030837005, 0, 0.190735698, 0)
+TeleportTo15K.Size = UDim2.new(0, 200, 0, 38)
+TeleportTo15K.Font = Enum.Font.FredokaOne
+TeleportTo15K.Text = "TP TO 15K WINS (BEST ONE)"
+TeleportTo15K.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportTo15K.TextScaled = true
+TeleportTo15K.TextSize = 14.000
+TeleportTo15K.TextWrapped = true
+
+local teleportEnabled = false
+
+local function toggleTeleport()
+	teleportEnabled = not teleportEnabled
+
+	-- Change button color based on state
+	if teleportEnabled then
+		-- Teleport the player to the target position immediately
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+		humanoidRootPart.CFrame = CFrame.new(-528, -46, 2527) -- Teleport position
+	else
+		TeleportTo15K.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Red (disabled)
+	end
+end
+
+-- Button click event to trigger teleportation automatically
+TeleportTo15K.MouseButton1Down:connect(toggleTeleport)
 
 AutoRebirth.Name = "AutoRebirth"
 AutoRebirth.Parent = Frame
 AutoRebirth.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 AutoRebirth.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AutoRebirth.BorderSizePixel = 0
-AutoRebirth.Position = UDim2.new(0.0318949334, 0, 0.266862184, 0)
-AutoRebirth.Size = UDim2.new(0, 174, 0, 31)
-AutoRebirth.Font = Enum.Font.SourceSansBold
+AutoRebirth.Position = UDim2.new(0.51321584, 0, 0.190735698, 0)
+AutoRebirth.Size = UDim2.new(0, 200, 0, 38)
+AutoRebirth.Font = Enum.Font.FredokaOne
 AutoRebirth.Text = "Auto Rebirth"
 AutoRebirth.TextColor3 = Color3.fromRGB(255, 255, 255)
 AutoRebirth.TextScaled = true
 AutoRebirth.TextSize = 14.000
 AutoRebirth.TextWrapped = true
-
-UICorner_3.CornerRadius = UDim.new(0, 15)
-UICorner_3.Parent = AutoRebirth
-
-Title.Name = "Title"
-Title.Parent = Frame
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.131332085, 0, 0.0205278601, 0)
-Title.Size = UDim2.new(0, 394, 0, 32)
-Title.Font = Enum.Font.SourceSansBold
-Title.Text = "John's Script Gui"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextScaled = true
-Title.TextSize = 14.000
-Title.TextWrapped = true
-
-UICorner_4.Parent = Title
-
-ScriptVersion.Name = "ScriptVersion"
-ScriptVersion.Parent = Frame
-ScriptVersion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScriptVersion.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScriptVersion.BorderSizePixel = 0
-ScriptVersion.Position = UDim2.new(0.129455909, 0, 0.88269794, 0)
-ScriptVersion.Size = UDim2.new(0, 394, 0, 32)
-ScriptVersion.Font = Enum.Font.SourceSansBold
-ScriptVersion.Text = "Version 0.01"
-ScriptVersion.TextColor3 = Color3.fromRGB(255, 255, 255)
-ScriptVersion.TextScaled = true
-ScriptVersion.TextSize = 14.000
-ScriptVersion.TextWrapped = true
-
-UICorner_5.Parent = ScriptVersion
-
--- Functionality for AutoRebirth and FastPunch
 
 local punchingEnabled = false
 local rebirthEnabled = false
@@ -104,75 +79,128 @@ local punchConnection
 local rebirthConnection
 
 local function punch()
-    local args = {
-        [1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
-    }
-
-    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
+	local args = {
+		[1] = workspace:WaitForChild("Loaded"):WaitForChild("PunchingBags"):WaitForChild("PunchingBag")
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchService"):WaitForChild("RE"):WaitForChild("Train"):FireServer(unpack(args))
 end
 
 local function rebirth()
-    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("Rebirth"):FireServer()
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("Rebirth"):FireServer()
 end
 
-FastPunch.MouseButton1Down:connect(function()
-    punchingEnabled = not punchingEnabled
-
-    if punchingEnabled then
-        FastPunch.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Change to green
-        punchConnection = game:GetService("RunService").Heartbeat:Connect(function()
-            punch()
-        end)
-    else
-        FastPunch.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Change to red
-        if punchConnection then
-            punchConnection:Disconnect()
-            punchConnection = nil
-        end
-    end
+OPAUTOFASTPUNCH.MouseButton1Down:connect(function()
+	punchingEnabled = not punchingEnabled
+	if punchingEnabled then
+		OPAUTOFASTPUNCH.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Change to green
+		punchConnection = game:GetService("RunService").Heartbeat:Connect(function()
+			punch()
+		end)
+	else
+		OPAUTOFASTPUNCH.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Change to red
+		if punchConnection then
+			punchConnection:Disconnect()
+			punchConnection = nil
+		end
+	end
 end)
 
 AutoRebirth.MouseButton1Down:connect(function()
-    rebirthEnabled = not rebirthEnabled
-
-    if rebirthEnabled then
-        AutoRebirth.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Change to green
-        rebirthConnection = game:GetService("RunService").Heartbeat:Connect(function()
-            rebirth()
-        end)
-    else
-        AutoRebirth.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Change to red
-        if rebirthConnection then
-            rebirthConnection:Disconnect()
-            rebirthConnection = nil
-        end
-    end
+	rebirthEnabled = not rebirthEnabled
+	if rebirthEnabled then
+		AutoRebirth.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Change to green
+		rebirthConnection = game:GetService("RunService").Heartbeat:Connect(function()
+			rebirth()
+		end)
+	else
+		AutoRebirth.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Change to red
+		if rebirthConnection then
+			rebirthConnection:Disconnect()
+			rebirthConnection = nil
+		end
+	end
 end)
 
--- Draggable Frame Logic
+OPAUTOFASTPUNCH.Name = "OPAUTOFASTPUNCH"
+OPAUTOFASTPUNCH.Parent = Frame
+OPAUTOFASTPUNCH.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+OPAUTOFASTPUNCH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPAUTOFASTPUNCH.BorderSizePixel = 0
+OPAUTOFASTPUNCH.Position = UDim2.new(0.030837005, 0, 0.326975465, 0)
+OPAUTOFASTPUNCH.Size = UDim2.new(0, 200, 0, 38)
+OPAUTOFASTPUNCH.Font = Enum.Font.FredokaOne
+OPAUTOFASTPUNCH.Text = "OP AUTO FAST PUNCH"
+OPAUTOFASTPUNCH.TextColor3 = Color3.fromRGB(255, 255, 255)
+OPAUTOFASTPUNCH.TextScaled = true
+OPAUTOFASTPUNCH.TextSize = 14.000
+OPAUTOFASTPUNCH.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.279735684, 0, 0.836512268, 0)
+Credits.Size = UDim2.new(0, 200, 0, 50)
+Credits.Font = Enum.Font.Unknown
+Credits.Text = "Version 0.2"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+Credits2.Name = "Credits2"
+Credits2.Parent = Frame
+Credits2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits2.BackgroundTransparency = 1.000
+Credits2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Credits2.BorderSizePixel = 0
+Credits2.Position = UDim2.new(0.0154185025, 0, 0.700272501, 0)
+Credits2.Size = UDim2.new(0, 440, 0, 50)
+Credits2.Font = Enum.Font.Unknown
+Credits2.Text = "Made By: LeaksAFile"
+Credits2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits2.TextScaled = true
+Credits2.TextSize = 14.000
+Credits2.TextWrapped = true
+
+Credits3.Name = "Credits3"
+Credits3.Parent = Frame
+Credits3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits3.BackgroundTransparency = 1.000
+Credits3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Credits3.BorderSizePixel = 0
+Credits3.Position = UDim2.new(0.030837005, 0, 0.0245231614, 0)
+Credits3.Size = UDim2.new(0, 440, 0, 50)
+Credits3.Font = Enum.Font.Unknown
+Credits3.Text = "👊Break Wall Sim Script"
+Credits3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits3.TextScaled = true
+Credits3.TextSize = 14.000
+Credits3.TextWrapped = true
+
+-- Draggable functionality for the Frame
 local dragging = false
-local dragInput, mousePos, framePos
+local dragInput, dragStart, startPos
 
 Frame.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-        dragging = true
-        dragInput = input
-        mousePos = input.Position
-        framePos = Frame.Position
-
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = true
+		dragStart = input.Position
+		startPos = Frame.Position
+	end
 end)
 
 Frame.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement then
-        if dragging then
-            local delta = input.Position - mousePos
-            Frame.Position = UDim2.new(framePos.X.Scale, framePos.X.Offset + delta.X, framePos.Y.Scale, framePos.Y.Offset + delta.Y)
-        end
-    end
+	if input.UserInputType == Enum.UserInputType.MouseMovement and dragging then
+		local delta = input.Position - dragStart
+		Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+end)
+
+Frame.InputEnded:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = false
+	end
 end)
